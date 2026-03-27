@@ -1,17 +1,23 @@
 {
-  "extends": "@tsconfig/node22/tsconfig.json",
   "compilerOptions": {
-    "rootDir": "./src",
+    "target": "ES2022",
     "module": "NodeNext",
-    "esModuleInterop": true,
-    "moduleResolution": "nodenext",
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "outDir": "lib",
-    "sourceMap": true,
+    "moduleResolution": "NodeNext",
+
+    "rootDir": "./src",
+    "outDir": "./dist",
+
     "strict": true,
-    "target": "es2017"
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+
+    "forceConsistentCasingInFileNames": true,
+
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    "types": ["node"]
   },
-  "compileOnSave": true,
-  "include": ["src"]
+  "include": ["src", "scripts"],
+  "exclude": ["node_modules", "dist"]
 }
